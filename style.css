@@ -1,0 +1,168 @@
+@font-face {
+	font-family: 'SW';
+	src: url('SW.ttf') format('truetype');
+}
+
+body{
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url(stars.jpg);
+    font-family: 'SW';
+    color: white;
+}
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.spaceMorpion {
+    font-size: 8vmin;
+    margin: 0;
+}
+.responsive {
+    font-size: 3vmin;
+    margin: 0;
+}
+
+.zoneHorizontale {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.zoneVerticale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: transparent;
+    width: 51vmin;
+    height: 51vmin;
+    border: solid white 1vmin;
+}
+
+.grille div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vmin;
+    background: transparent;
+    border: solid white 1vmin;
+    color: white;
+}
+
+.afficheur {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight:bold ;
+    width: 51vmin;
+    border : white solid 1vmin;
+    height: 17vmin;
+    color: black;
+    font-size: 4vmin;
+    background: white;
+
+    padding: 0;
+
+}
+
+.afficheur div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+button{
+    font-size: 1.9vmin;
+    background:black;
+    color: white;
+    border-radius: 100vmin;
+    font-family: 'SW';
+    padding: 1vmin;
+    width: fit-content;
+    height: fit-content;
+}
+button:hover{
+    opacity: 0.5;
+}
+
+.compteurs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.compteurJoueur1, .compteurJoueur2{
+    color: white;
+    font-size: 10vmin;
+    margin: 0;
+}
+
+.signature{
+    font-size: 2vmin;
+    width: 95vw;
+    text-align: end;
+    margin: 0;
+
+}
+
+@media (max-aspect-ratio: 2/3) {
+    .zoneHorizontale {
+    flex-direction: column;
+    }
+    .grille{
+    width: 69vmin;
+    height: 69vmin;
+    }
+    .grille div {
+    font-size: 13vmin;
+    }
+    .afficheur{
+    width: 69vmin;
+    height: 23vmin;
+    font-size: 5vmin;
+    }
+    .afficheur div{
+        flex-direction: column;
+    }
+    button{
+        font-size: 3vmin;
+    }
+    .boutonNouvelleManche{
+        margin-bottom: 1vmin;
+    }
+    .compteurs {
+        flex-direction: row;
+        margin-top: 1vmin;
+    }
+    .compteurJoueur1, .compteurJoueur2{
+        font-size: 13vmin;
+    }
+    
+}
+@media screen and (orientation: portrait) {
+    .signature{
+        text-align: center;
+    }
+  }
+
+  
